@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+
+@mixin card-content {
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    background-color: #5497E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 25rem;
+    height: 40rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //glass
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: #d67f7f;
+
+    &-country {
+        width: 100%;
+    }
+
+    &-confirmed {
+        background-color: #dbcd08;
+        @include card-content;
+    }
+
+    &-recovered {
+        background: #b1a7a7;
+        @include card-content;
+    }
+
+    &-death {
+        background-color: #81df29;
+        @include card-content;
+    }
+}
+
+.number {
+    &-confirmed {
+
+        margin-left: 1.4rem;
+    }
+
+    &-recovered {
+        margin-left: 1.4rem;
+    }
+
+    &-death {
+        margin-left: 1.4rem;
+    }
+}
+
+.info {
+    margin-top: .6rem;
+    width: 10rem;
+    display: flex;
+}
+
+.flag {
+    width: 100%;
+}
