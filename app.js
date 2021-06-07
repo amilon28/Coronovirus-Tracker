@@ -5,7 +5,7 @@ const numberOfConfirmed = document.querySelector(".number-confirmed");
 const numberOfRecovered = document.querySelector(".number-recovered");
 const numberOfDeath = document.querySelector(".number-death");
 const countryFlag = document.querySelector(".flag");
-const searchValue = document.querySelector(".search");
+const deathRate = document.querySelector(".number-mortal");
 
 // return country flag
 const getFlag = function (country) {
@@ -30,6 +30,10 @@ const getInfo = function (country) {
       numberOfConfirmed.innerText = data[0].confirmed;
       numberOfRecovered.innerText = data[0].recovered;
       numberOfDeath.innerText = data[0].deaths;
+      deathRate.innerText = (
+        (data[0].deaths / data[0].confirmed) *
+        100
+      ).toFixed(2);
       getFlag(data[0].country);
     })
     .catch((err) => {

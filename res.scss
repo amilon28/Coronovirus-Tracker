@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e2e2dfc0;
+    background-color: transparent;
+
 }
 
 * {
@@ -54,20 +56,19 @@ body {
     }
 
     &-confirmed {
-        background-color: transparent;
 
         @include card-content;
     }
 
     &-recovered {
-        background: transparent;
         @include card-content;
     }
 
     &-death {
-        background-color: transparent;
         @include card-content;
     }
+
+
 
     &:hover {
         transform: scale(1.2);
@@ -87,6 +88,10 @@ body {
     &-death {
         margin-left: 1.4rem;
     }
+
+    &-mortal {
+        margin-left: 1.4rem;
+    }
 }
 
 .info {
@@ -97,6 +102,15 @@ body {
 
 .flag {
     width: 100%;
+}
+
+.card-MortalityRate .info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: .5rem;
+    padding-bottom: 2rem;
+
 }
 
 @keyframes sideInUp {

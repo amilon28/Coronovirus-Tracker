@@ -62,7 +62,6 @@ body {
 }
 
 .card-confirmed {
-  background-color: transparent;
   padding: 1.5rem .5rem;
   border-radius: .5rem;
   display: -webkit-box;
@@ -72,10 +71,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #e2e2dfc0;
+  background-color: transparent;
 }
 
 .card-recovered {
-  background: transparent;
   padding: 1.5rem .5rem;
   border-radius: .5rem;
   display: -webkit-box;
@@ -85,10 +84,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #e2e2dfc0;
+  background-color: transparent;
 }
 
 .card-death {
-  background-color: transparent;
   padding: 1.5rem .5rem;
   border-radius: .5rem;
   display: -webkit-box;
@@ -98,6 +97,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #e2e2dfc0;
+  background-color: transparent;
 }
 
 .card:hover {
@@ -117,6 +117,10 @@ body {
   margin-left: 1.4rem;
 }
 
+.number-mortal {
+  margin-left: 1.4rem;
+}
+
 .info {
   margin-top: .6rem;
   width: 10rem;
@@ -127,6 +131,18 @@ body {
 
 .flag {
   width: 100%;
+}
+
+.card-MortalityRate .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: .5rem;
+  padding-bottom: 2rem;
 }
 
 @-webkit-keyframes sideInUp {
