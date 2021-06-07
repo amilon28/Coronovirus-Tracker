@@ -32,6 +32,8 @@ body {
   height: 40rem;
   font-size: 1.5rem;
   font-weight: 600;
+  -webkit-animation: sideInUp 2s ease 1;
+          animation: sideInUp 2s ease 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +51,10 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background-color: #d67f7f;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
 }
 
 .card-country {
@@ -57,36 +62,47 @@ body {
 }
 
 .card-confirmed {
-  background-color: #dbcd08;
+  background-color: transparent;
   padding: 1.5rem .5rem;
+  border-radius: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #e2e2dfc0;
 }
 
 .card-recovered {
-  background: #b1a7a7;
+  background: transparent;
   padding: 1.5rem .5rem;
+  border-radius: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #e2e2dfc0;
 }
 
 .card-death {
-  background-color: #81df29;
+  background-color: transparent;
   padding: 1.5rem .5rem;
+  border-radius: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #e2e2dfc0;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .number-confirmed {
@@ -111,5 +127,31 @@ body {
 
 .flag {
   width: 100%;
+}
+
+@-webkit-keyframes sideInUp {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sideInUp {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=res.css.map */

@@ -15,4 +15,14 @@
       <a href="result.html" class="search-btn" target="_blank">Search</a>
     </div>
   </body>
+  <script>
+    document
+      .querySelector(".search-btn")
+      .addEventListener("click", function () {
+        localStorage.setItem(
+          "country",
+          document.querySelector(".search").value
+        );
+      });
+  </script>
 </html>

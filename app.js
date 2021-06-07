@@ -5,14 +5,14 @@ const numberOfConfirmed = document.querySelector(".number-confirmed");
 const numberOfRecovered = document.querySelector(".number-recovered");
 const numberOfDeath = document.querySelector(".number-death");
 const countryFlag = document.querySelector(".flag");
+const searchValue = document.querySelector(".search");
 
 // return country flag
 const getFlag = function (country) {
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data[0].flag);
-      return data[0].flag;
+      countryFlag.src = data[0].flag;
     });
 };
 
@@ -26,7 +26,7 @@ const getInfo = function (country) {
   })
     .then((response) => response.json())
     .then((data) => {
-      countryFlag.src = `${getFlag(data[0].country)}`;
+      getFlag(data[0].country);
       numberOfConfirmed.innerText = data[0].confirmed;
       numberOfRecovered.innerText = data[0].recovered;
       numberOfDeath.innerText = data[0].deaths;
@@ -38,4 +38,4 @@ const getInfo = function (country) {
   // ---------------
 };
 
-getInfo("usa");
+getInfo(localStorage.getItem("country"));
