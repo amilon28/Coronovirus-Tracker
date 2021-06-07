@@ -15,7 +15,9 @@ html {
 body {
   font-family: 'Quicksand', sans-serif;
   height: 100vh;
-  background-color: #5497E5;
+  background: #ebee33;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(235, 238, 51, 0.919503)), to(#6adbf2));
+  background: linear-gradient(90deg, rgba(235, 238, 51, 0.919503) 0%, #6adbf2 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,15 +27,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .card {
+  opacity: 0;
   width: 25rem;
   height: 40rem;
   font-size: 1.5rem;
   font-weight: 600;
-  -webkit-animation: sideInUp 2s ease 1;
-          animation: sideInUp 2s ease 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,10 +53,8 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  -webkit-transition: -webkit-transform .4s;
-  transition: -webkit-transform .4s;
-  transition: transform .4s;
-  transition: transform .4s, -webkit-transform .4s;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 .card-country {
@@ -143,6 +143,42 @@ body {
           justify-content: flex-start;
   padding-left: .5rem;
   padding-bottom: 2rem;
+}
+
+.load {
+  width: 12.8rem;
+  -webkit-animation: left-right 1s infinite alternate;
+          animation: left-right 1s infinite alternate;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes left-right {
+  0% {
+    -webkit-transform: translateX(-4rem);
+            transform: translateX(-4rem);
+  }
+  100% {
+    -webkit-transform: translateX(4rem);
+            transform: translateX(4rem);
+  }
+}
+
+@keyframes left-right {
+  0% {
+    -webkit-transform: translateX(-4rem);
+            transform: translateX(-4rem);
+  }
+  100% {
+    -webkit-transform: translateX(4rem);
+            transform: translateX(4rem);
+  }
 }
 
 @-webkit-keyframes sideInUp {

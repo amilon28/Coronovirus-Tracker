@@ -6,7 +6,13 @@ const numberOfRecovered = document.querySelector(".number-recovered");
 const numberOfDeath = document.querySelector(".number-death");
 const countryFlag = document.querySelector(".flag");
 const deathRate = document.querySelector(".number-mortal");
+const loadingImg = document.querySelector(".loading");
+const card = document.querySelector(".card");
 
+setTimeout(() => {
+  loadingImg.style.display = "none";
+  card.style.opacity = 1;
+}, 3500);
 // return country flag
 const getFlag = function (country) {
   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
@@ -26,6 +32,7 @@ const getInfo = function (country) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       getFlag(data[0].country);
       numberOfConfirmed.innerText = data[0].confirmed;
       numberOfRecovered.innerText = data[0].recovered;

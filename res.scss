@@ -25,19 +25,21 @@ html {
 body {
     font-family: 'Quicksand', sans-serif;
     height: 100vh;
-    background-color: #5497E5;
+    background: rgb(235, 238, 51);
+    background: linear-gradient(90deg, rgba(235, 238, 51, 0.919502835313813) 0%, rgba(106, 219, 242, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
 }
 
 .card {
+    opacity: 0;
     width: 25rem;
     height: 40rem;
     font-size: 1.5rem;
     font-weight: 600;
-    animation: sideInUp 2s ease 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +51,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 
-    transition: transform .4s;
+    transition: opacity .4s;
 
     &-country {
         width: 100%;
@@ -110,6 +112,32 @@ body {
     justify-content: flex-start;
     padding-left: .5rem;
     padding-bottom: 2rem;
+
+}
+
+.load {
+    width: 12.8rem;
+    animation: left-right 1s infinite alternate;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+@keyframes left-right {
+    0% {
+        transform: translateX(-4rem);
+    }
+
+    100% {
+        transform: translateX(4rem);
+    }
 
 }
 
