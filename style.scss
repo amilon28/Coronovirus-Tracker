@@ -76,6 +76,18 @@ body {
 
 }
 
+select {
+    font-size: 2rem;
+    background-color: #4d5061;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 ::placeholder {
     color: #000000c2;
 }

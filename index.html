@@ -8,21 +8,13 @@
     <link rel="icon" href="img/fav.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="country.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <input type="text" class="search" placeholder="Country" />
-      <a href="result.html" class="search-btn" target="_blank">Search</a>
+      <select id="country"></select>
+      <a href="result.html" class="search-btn">Search</a>
     </div>
   </body>
-  <script>
-    document
-      .querySelector(".search-btn")
-      .addEventListener("click", function () {
-        localStorage.setItem(
-          "country",
-          document.querySelector(".search").value
-        );
-      });
-  </script>
 </html>

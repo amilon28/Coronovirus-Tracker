@@ -21,6 +21,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -157,6 +161,27 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.btn-back {
+  margin-top: 7rem;
+  font-family: inherit;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #4d5063;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .8rem;
+}
+
+.btn-back:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn-back:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 @-webkit-keyframes left-right {
