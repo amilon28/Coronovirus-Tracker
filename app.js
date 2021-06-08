@@ -8,10 +8,12 @@ const countryFlag = document.querySelector(".flag");
 const deathRate = document.querySelector(".number-mortal");
 const loadingImg = document.querySelector(".loading");
 const card = document.querySelector(".card");
+const flag = document.querySelector(".country-flag");
 
 setTimeout(() => {
   loadingImg.style.display = "none";
   card.style.opacity = 1;
+  flag.style.opacity = 1;
 }, 3500);
 // return country flag
 const getFlag = function (country) {
