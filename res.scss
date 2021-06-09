@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 
+@mixin rate {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: .2rem;
+
+}
+
 @mixin card-content {
     padding: 1.5rem .5rem;
     border-radius: .5rem;
@@ -51,7 +59,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 
-    transition: opacity .4s;
+    transition: opacity .4s, transform .6s;
 
 
 
@@ -64,6 +72,14 @@ body {
     }
 
     &-death {
+        @include card-content;
+    }
+
+    &-vaccin {
+        @include card-content;
+    }
+
+    &-MortalityRate {
         @include card-content;
     }
 
@@ -97,9 +113,18 @@ body {
         margin-left: 1.4rem;
     }
 
+    &-vaccin {
+        margin-left: 1.4rem;
+    }
+
     &-mortal {
         margin-left: 1.4rem;
     }
+
+    &-vaccin-rate {
+        margin-left: 1.4rem;
+    }
+
 }
 
 .info {
@@ -113,13 +138,15 @@ body {
 }
 
 .card-MortalityRate .info {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: .5rem;
-    padding-bottom: 2rem;
-
+    @include rate();
 }
+
+.card-vaccinRate .info {
+    @include rate();
+    padding: 1.2rem 0 2rem .4rem;
+}
+
+
 
 .load {
     width: 12.8rem;
@@ -153,6 +180,9 @@ body {
     }
 }
 
+.icon {
+    width: 3.2rem;
+}
 
 
 
