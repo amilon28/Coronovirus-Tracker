@@ -14,11 +14,13 @@
 
     background-color: #2B3945;
     border-radius: .8rem;
+    transition: .4s;
 
 
     &__info {
         padding: 1.5rem;
         color: #BFBFBF;
+        user-select: none;
     }
 
     &__img {
@@ -50,6 +52,10 @@
             color: #fff;
             margin-right: 1rem;
         }
+    }
+
+    &:hover {
+        transform: scale(1.1);
     }
 
 
