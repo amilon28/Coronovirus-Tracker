@@ -19,7 +19,10 @@ function renderCountry(data, deathNum) {
   
       <div class="country__info">
         <h3 class="country__name">${data[0].name}</h3>
-        <p class="country__row"><span>Population:</span>${data[0].population}</p>
+        <p class="country__row"><span>Population:</span>${data[0].population.toLocaleString(
+          "en-US",
+          { maximumFractionDigits: 0 }
+        )}</p>
         <p class="country__row"><span>Capital:</span>${data[0].capital}</p>
         <p class="country__row"><span>Deaths:</span>${deathNum}</p>
       </div>
