@@ -35,10 +35,11 @@ const vaccin = (country) => {
       countryLists.forEach(([countryName, countryInfo]) => {
         if (country === countryName) {
           numberOfVaccin.innerText = countryInfo.All.people_vaccinated;
-          vaccinRate.innerText = (
-            (countryInfo.All.people_vaccinated / countryInfo.All.population) *
-            100
-          ).toFixed(2);
+          vaccinRate.innerText =
+            (
+              (countryInfo.All.people_vaccinated / countryInfo.All.population) *
+              100
+            ).toFixed(2) + " %";
         } else {
           return;
         }
@@ -54,10 +55,11 @@ const mortalRate = (c) => {
       const countryList = Object.entries(data);
       countryList.forEach(([countryName, countryInfo]) => {
         if (c === countryName) {
-          deathRate.innerText = (
-            (countryInfo.All.deaths / countryInfo.All.population) *
-            100
-          ).toFixed(4);
+          deathRate.innerText =
+            (
+              (countryInfo.All.deaths / countryInfo.All.population) *
+              100
+            ).toFixed(4) + " %";
         }
       });
     });
