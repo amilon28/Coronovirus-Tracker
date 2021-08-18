@@ -38,13 +38,11 @@ function findTargetCountries(list, numOfDeath) {
       countryName !== "Global" &&
       countryName !== "Czechia"
     ) {
-      console.log(countryName);
       (async () => {
         try {
           const countryData = await getJson(
             `https://restcountries.eu/rest/v2/name/${countryName}`
           );
-          console.log(countryData);
           renderCountry(countryData, countryInfo.All.deaths);
         } catch (err) {
           console.log(err);

@@ -58,6 +58,10 @@ body {
   transition: opacity .4s, -webkit-transform .6s;
   transition: opacity .4s, transform .6s;
   transition: opacity .4s, transform .6s, -webkit-transform .6s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .card-confirmed {
